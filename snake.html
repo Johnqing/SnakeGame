@@ -171,7 +171,8 @@
 			if(nextX > self.col-1 || nextY > self.row-1 
 				|| nextX < 0 || nextY < 0 || 
 				self.aLi[nextX][nextY].className === self.classSnake){
-				self.snakeTimer = true;
+				clearInterval(self.snakeTimer);
+				self.gameOver();
 				return ;
 			}
 
@@ -218,6 +219,9 @@
 					default:
 						break;
 			}
+		},
+		gameOver: function(){
+			alert('Game Over!');
 		},
 		/**
 		 * 绑定事件
