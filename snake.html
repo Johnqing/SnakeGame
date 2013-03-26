@@ -187,10 +187,6 @@
 			self.aLi[nextX][nextY].className=self.classSnake;
 			self.snakeLen = self.snake.length;
 			self.changeSpeed(self.snakeLen);
-
-			self.snakeTimer = window.setTimeout(function(){
-				self.moveSnake
-			},self.speed);
 		},
 		/**
 		 * 更新速度
