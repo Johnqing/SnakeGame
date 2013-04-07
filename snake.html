@@ -51,6 +51,16 @@
 		}
 	}
 	/**
+	 * 拓展
+	 * @param  {[Object]} define [默认配置项]
+	 * @param  {[Object]} source    
+	 * @return {[Object]}
+	 */
+	var extend = function(define, source) {
+		for (var property in source) define[property] = source[property];
+		return define;
+	}
+	/**
 	 * 默认参数
 	 * @type {Object}
 	 */
@@ -240,7 +250,7 @@
 	}
 	// 释放接口
 	win.r = function(o){
-		o = o || defineCofig;
+		o = extend(defineCofig, o);
 		new Snake(o);
 	}
 }(this));
