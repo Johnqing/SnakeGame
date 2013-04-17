@@ -160,9 +160,9 @@
 		run: function(){
 			var self = this;
 			if(self.snakeTimer) {
-				window.clearInterval(self.snakeTimer)
+				win.clearInterval(self.snakeTimer)
 			};
-			self.snakeTimer = window.setInterval(
+			self.snakeTimer = win.setInterval(
 				function (){
 					self.moveSnake();
 				}, 
